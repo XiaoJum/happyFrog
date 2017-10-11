@@ -1,0 +1,150 @@
+		/*****************样式清除*************/ 
+		body{
+		 	margin:0;
+		 	width: 400px;
+		 	height: 400px;
+		 	
+
+		 }
+		 /****************多处应用提取：圆角化，绝对居中**************/ 
+		 .head,.head .left,.head .right{
+		 	border-radius:50%;
+		 }
+		 body,.eyesFst,.eyeWhite{
+		 	display: flex;
+		 	justify-content:space-around;
+		 	align-items:center;
+		 }
+		 .eyesFst div{
+		 	position: absolute;
+		 }
+		 /*****************head开始*************/ 
+		.head{
+			width: 110px;
+			height: 88px;
+			background: #a3d768;
+			position: relative;
+		}
+		.eyesFst{
+			width: 36px;
+			height: 39px;
+			background: #a3d768;
+			position: absolute;
+		}
+		.eyesFst.left{
+			left:12px;
+			top:-17px;
+	}
+		.eyesFst.right{
+			left:64px;
+			top:-17px;
+		}
+		.eyeWhite{
+			width: 25px;
+			height: 25px;
+			background:#f5fbed;
+			animation:eyesFstChange 1s infinite 2s alternate-reverse;
+		}
+		.eyeBlack{
+			width: 16px;
+			height: 16px;
+			background: #4b793b;
+			position:relative;
+		}
+		.eyeBall{
+			width: 9px;
+			height: 9px;
+			background:#f5fbed;
+			position:absolute;
+		}	
+		.eyeBall.left{
+			left:1px;
+			top:1px;
+		}
+		.eyeBall.right{
+			left:1px;
+			top:1px;
+		}
+		.eyesSec{
+			width: 22px;
+			height: 25px;
+			background: #4c783a;
+			position:absolute;
+			left:19px;
+			top:-10px;
+			border-radius:12px 12px 0 0/10px 10px 0 0;
+			opacity:0;
+			animation:eyesSecChange 1s infinite 2s alternate-reverse;
+		}
+		.eyesSec.secRight{
+			left:70px;
+			border-radius:;
+		}
+		.eyesBallSec{
+			width: 22px;
+			height: 25px;
+			position:absolute;
+			left:0px;
+			top:3px;
+			background: #a3d768;
+			border-radius:12px 12px 0 0/7px 7px 0 0;
+		}
+		.face{
+			width: 14px;
+			height: 10px;
+			background: #f7d3c9;
+			border-radius:50%;
+			position:absolute;
+			left: 17px;
+			top: 20px;
+			opacity:0;
+			animation:faceChange 1s infinite 2s alternate-reverse;
+		}
+		.face.faceRight{
+			left:80px;
+		}
+		.mouth{
+			width: 28px;
+			height: 13px;
+			background:#fff;
+			position:absolute;
+			left:41px;
+			top:14px;
+			border-radius: 0 0 14px 14px /0 0 14px 14px;
+		}
+		.mouth.two{
+			top:6px;
+			left:41px;
+			background: #a3d768;
+			border-radius: 0 0 28px 28px/0 0 4px 4px;
+		}
+		@keyframes eyesFstChange{
+			0%{
+				opacity:1;
+				transform:scale(1);
+				transition-delay:1s;
+			} 
+			100%{
+				opacity:0;
+				transform:scale(0);
+			}
+		}
+		@keyframes faceChange{
+			0%{
+				opacity:0;
+			}
+			100%{
+				opacity:1;
+				transition-delay:2.5s;
+			}
+		}
+		@keyframes eyesSecChange{
+			0%{
+				opacity:0;
+				}
+			100%{
+					transform:translateY(10px);
+					opacity:1;
+					transition-delay:0.5s;
+				}
+		}
